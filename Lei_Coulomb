@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+// Função para calcular a força elétrica
+double calcularForca(double q1, double q2, double r, double k) {
+    return (k * abs(q1 * q2)) / (r * r);
+}
+
+int main() {
+    double q1, q2, r, k;
+
+    cout << "Digite o valor da primeira carga (q1): ";
+    cin >> q1;
+
+    cout << "Digite o valor da segunda carga (q2): ";
+    cin >> q2;
+
+    cout << "Digite a distância entre as cargas (r): ";
+    cin >> r;
+
+    cout << "Digite a constante eletrostática (k): ";
+    cin >> k;
+
+    double forca = calcularForca(q1, q2, r, k);
+
+    cout << "A força elétrica entre as cargas é: " << forca << " Newtons" << endl;
+
+    return 0;
+}
